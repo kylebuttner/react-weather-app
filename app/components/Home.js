@@ -2,22 +2,27 @@ var React = require('react');
 var GetCityContainer = require('../containers/GetCityContainer');
 
 var styles = {
-  'fullPageBg': {
-    backgroundImage: 'url("app/images/pattern.svg")',
+  container: {
     backgroundSize: 'cover',
+    backgroundImage: "url('app/images/pattern.svg')",
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
     height: '100%',
     width: '100%'
-  }
+  },
+  header: {
+    fontSize: 45,
+    color: '#fff',
+    fontWeight: 100,
+  },
 }
 
 function Home(props) {
   return (
-    <div style={styles.fullPageBg}>
-      <h1>Hello from Home</h1>
+    <div style={styles.container}>
+      <h1 style={styles.header}>Enter a city</h1>
       <GetCityContainer />
     </div>
   )
